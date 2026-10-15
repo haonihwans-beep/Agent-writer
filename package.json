@@ -1,0 +1,36 @@
+{
+  "name": "agent-writer",
+  "version": "0.1.0",
+  "description": "Production-grade novel/webnovel writing agent: worldbuilding bible, continuity critic, self-learning lessons, scheduled chapter production, EPUB/publish export.",
+  "type": "module",
+  "bin": {
+    "novel": "dist/src/cli.js"
+  },
+  "files": [
+    "dist/src",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=22.6"
+  },
+  "scripts": {
+    "dev": "node src/cli.ts",
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "node --test tests/*.test.ts",
+    "lint": "npm run typecheck",
+    "smoke": "node dist/src/cli.js --help"
+  },
+  "keywords": [
+    "novel",
+    "webnovel",
+    "writing-agent",
+    "worldbuilding",
+    "llm"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "typescript": "^7.0.2"
+  }
+}
